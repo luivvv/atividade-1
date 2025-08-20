@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Número</title>
+</head>
+<body>
+    <!-- PROBLEMA: Crie um programa que peça ao usuário para digitar um número entre 1 e 10.
+
+Se o usuário digitar um número fora desse intervalo, o programa deve continuar pedindo até que ele digite corretamente.
+
+Quando o usuário digitar corretamente, exiba uma mensagem dizendo: "Número aceito!".-->
+
+    <h1>Digite um número entre 1 e 10</h1>
+    <p id="mensagem"></p>
+
+    <script>
+        let numero = 0; // inicializa a variável
+        const mensagem = document.getElementById("mensagem");
+
+        // Enquanto o número não estiver entre 1 e 10
+        while (numero < 1 || numero > 10) {
+            numero = parseInt(prompt("Digite um número entre 1 e 10:"));
+
+            if (numero >= 1 && numero <= 10) {
+                mensagem.textContent = "Número aceito!";
+            } else {
+                alert("Número inválido! Tente novamente.");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior de Idade</title>
+    <style>
+        /* Estilo básico */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #mensagem {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .verde {
+            color: green;
+        }
+
+        .vermelho {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Você é maior de idade?</h1>
+
+    <!-- Botões para resposta -->
+    <button onclick="verificarIdade(true)">Sim</button>
+    <button onclick="verificarIdade(false)">Não</button>
+
+    <!-- Local para exibir a mensagem -->
+    <p id="mensagem"></p>
+
+    <script>
+        function verificarIdade(maiorDeIdade) {
+            const mensagem = document.getElementById("mensagem");
+            if (maiorDeIdade) {
+                mensagem.textContent = "Então você pode dirigir!";
+                mensagem.className = "verde"; // Cor verde
+            } else {
+                mensagem.textContent = "Você ainda não pode dirigir.";
+                mensagem.className = "vermelho"; // Cor vermelha
+            }
+        }
+    </script>
+</body>
+</html>
